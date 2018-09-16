@@ -20,6 +20,7 @@ node {
                 remote.user = userName
                 remote.identityFile = identity
                 sshCommand remote: remote, command: """ 
+                                                    docker stop django_coreui
                                                     docker rm -f django_coreui 
                                                     cd /tmp
                                                     docker login -u ${env.DOCKER_USER_ID} -p ${env.DOCKER_USER_PASSWD} 
