@@ -37,3 +37,9 @@ python manage.py runserver
 ```
 python manage.py runserver --setting=backend.settings.development
 ``` 
+
+### Docker
+```
+docker pull kaniz/django_coreui
+docker run -d -p 8000:8000 kaniz/django_coreui 
+```
