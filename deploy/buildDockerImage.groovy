@@ -12,6 +12,7 @@ node {
     stage('Push image') {
         docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
             dockerImage.push("${env.BUILD_ID}")
+            dockerImage.push("latest")
         }
     }
 
